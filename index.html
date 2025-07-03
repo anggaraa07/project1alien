@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="alien">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For My Grobolin 💫</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(ellipse at top, #1a002a, #000);
+      color: #f8f8ff;
+      font-family: "cursive, sans-serif;
+      text-align: center;
+      padding-top: 60px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ffccff;
+      text-shadow: 0 0 10px #f0f;
+    }
+
+    .alien-text {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 20px auto;
+      box-shadow: 0 0 20px #ff00ff99;
+    }
+
+    .btn-alien {
+      background: #ff66cc;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #ff33cc;
+    }
+
+    .btn-alien:hover {
+      background: #ff33aa;
+      box-shadow: 0 0 20px #ff99ff;
+    }
+
+    .message {
+      margin-top: 30px;
+      font-size: 1.3em;
+      color: #ccffcc;
+      min-height: 40px;
+    }
+
+    /* 👽 Foto Kamu Terbang */
+    .flying-alien {
+      position: absolute;
+      top: 80px;
+      left: -150px;
+      width: 100px;
+      animation: fly 10s linear infinite;
+      z-index: 1;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    @keyframes fly {
+      0% { left: -150px; transform: rotate(0deg); }
+      50% { top: 120px; transform: rotate(10deg); }
+      100% { left: 110%; transform: rotate(-10deg); }
+    }
+
+    /* ❤️ Love Animation */
+    .love {
+      position: absolute;
+      font-size: 30px;
+      animation: floatUp 1.5s ease-out forwards;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(1.8);
+      }
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Foto kamu terbang sebagai alien cinta -->
+<img src="https://i.postimg.cc/FRW51QgQ/IMG-20250624-WA0027.jpg" alt="Foto Aku Terbang" class="flying-alien">
+  <h1>💫 Zennka Thulu, Anisiioott 💫</h1>
+  <div class="alien-text">
+    <p><strong>Blorpi blop, zenka thulu!</strong><br>
+    Mi’lopi dudu sejak jumpa mulu~<br>
+    Hatiku meledak: <em>KRAK-ZHUU!</em><br>
+    Kau datang, jantungku: <em>dug-dug pulu~</em></p>
+  </div>
+
+  <button class="btn-alien" onclick="showLove()">Tap je</button>
+
+  <div class="message" id="message"></div>
+
+  <!-- 🔊 Suara kamu dari Vocaroo -->
+  <audio id="alienSound">
+    <source src="https://media.vocaroo.com/mp3/1iZwETGDD9kU" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const messages = [
+  
+      "Zennka pulu! Hatiku salto 12x tiap kamu chat🪐",
+    
+      "Ploompp zazzulom tikka🪐",
+     "Zorklab mimimi shazaa🪐",
+    "Grelmok tik tim boomba wushh wush🪐",
+    
+      "Cintaku lebih hot dari planet Molin 🔥🪐",
+      "Kamu senyum, otakku langsung ZENN ZENN BRUU 💥",
+      "Kupukupu di perutku muter kayak UFO 🛸💕",
+      "Cuma kamu yang bikin aku gla-gla-gaa 🫠💘"
+    ];
+
+    function showLove() {
+      // Pesan cinta alien random
+      const msg = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById("message").textContent = msg;
+
+      // Suara
+      const sound = document.getElementById("alienSound");
+      sound.currentTime = 0;
+      sound.play();
+
+      // Animasi Love
+      const love = document.createElement("div");
+      love.className = "love";
+      love.textContent = "❤️";
+      const x = window.innerWidth / 2 + (Math.random() * 100 - 50);
+      const y = window.scrollY + 300;
+      love.style.left = `${x}px`;
+      love.style.top = `${y}px`;
+      document.body.appendChild(love);
+      setTimeout(() => love.remove(), 1500);
+    }
+  </script>
+
+<footer style="margin-top: 60px; font-family: 'Comic Sans MS', cursive; font-size: 0.85em; color: #ffccff; opacity: 0.9; text-align: center;">
+  <hr style="width: 50%; border: 0; height: 1px; background: #ff66cc;">
+  <p>
+    for <strong> Anisioooottt budak✨</strong><br>
+     🛸💘<br>
+    <a href="https://wa.me/60177634537?text=~Syaang, Puisi tu bukan sembarang puisi tau, dalam makne nye tu"
+       style="color: #ff99ff; text-decoration: none; font-weight: bold;" target="_blank">
+      ?Balik WhatsApp je Eh klu dh baca, klik je emote ni
+       🫂💌
+    </a>
+  </p>
+</footer>
+</body>
+</html>
